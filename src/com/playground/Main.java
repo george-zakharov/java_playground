@@ -4,12 +4,19 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 
 public class Main {
+    private static void logText(String logTxt) {
+        System.out.println("\n" + logTxt);
+    }
+
     public static void main(String[] args) throws Exception {
-        System.out.println("My beautiful program");
+        logText("My beautiful program");
         MessageDigest md = MessageDigest.getInstance("MD5");
-        byte[] digest = md.digest("abracadabra".getBytes(StandardCharsets.UTF_8));
+        String txt = "abracadabra";
+        byte[] digest = md.digest(txt.getBytes(StandardCharsets.UTF_8));
         for (byte b : digest) {
             System.out.printf("%02x", b);
         }
+
+        logText("The length of the txt string is: " + txt.length());
     }
 }
