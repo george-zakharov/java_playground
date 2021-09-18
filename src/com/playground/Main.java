@@ -5,6 +5,12 @@ import java.security.MessageDigest;
 import java.util.Scanner;
 
 public class Main {
+    enum Level {
+        LOW,
+        MEDIUM,
+        HIGH
+    }
+
     private static void logText(String logTxt) {
         System.out.println("\n" + logTxt);
     }
@@ -25,5 +31,8 @@ public class Main {
         logText("Enter username... ");
         String userName = myObj.nextLine();
         logText("Username is: " + userName);
+
+        Level lowTest = Level.LOW;
+        logText(lowTest.toString());
     }
 }
