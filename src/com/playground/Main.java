@@ -2,6 +2,7 @@ package com.playground;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
+import java.util.Scanner;
 
 public class Main {
     private static void logText(String logTxt) {
@@ -18,5 +19,11 @@ public class Main {
         }
 
         logText("The length of the txt string is: " + txt.length());
+        logText("");
+
+        Scanner myObj = new Scanner(System.in);
+        logText("Enter username... ");
+        String userName = myObj.nextLine();
+        logText("Username is: " + userName);
     }
 }
